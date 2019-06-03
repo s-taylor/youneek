@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "a function to filter unique (you-neek) values",
   "main": "index.js",
+  "files": ["index.js"],
   "scripts": {
     "test": "ava"
   },
