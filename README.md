@@ -12,7 +12,7 @@ A neat alternative is with ES6 you can do this...
 const unique = arr => [...new Set(arr)];
 ```
 
-However to me, this `arr.filter(unique)` is better than `unique(arr)`, especially if you're chaining to a `.map`.
+However to me, `arr.filter(unique)` is better than `unique(arr)`, especially if you're chaining to a `.map`.
 
 ## How to use it?
 
