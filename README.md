@@ -28,9 +28,9 @@ const result = arr.filter(unique);
 // result === [1, 2, 3, 4, 5, 8, 9];
 ```
 
-Though to be honest, you could copy and paste this. It's really small and I won't begrudge you for doing that, but maybe give me a star?
-
 ### Copy Paste
+
+Though to be honest, you could copy and paste this. It's really small and I won't begrudge you for doing that, but maybe give me a star?
 
 ```js
 function unique(elem, index, array) {
