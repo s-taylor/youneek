@@ -1,8 +1,12 @@
-function unique(elem, index, array) {
-  for (var i = 0; i < index; i++) {
-    if (array[i] === elem) return false;
-  }
-  return true;
+"use strict";
+
+var unique = function unique() {
+  var cache;
+  return function (elem, index, array) {
+    /* Note: `new Set` may require @babel/polyfill */
+    if (!cache) cache = new Set(array);
+    return cache.delete(elem);
+  };
 };
 
 module.exports = unique;
