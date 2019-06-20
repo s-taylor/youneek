@@ -59,6 +59,7 @@ function unique(elem, index, array) {
     if (array[i] === elem) return false;
   }
   return true;
+}
 ```
 
 This works by looping through the array and it checks each element against all the elements prior to it, to see if the same value exists. If it finds the same value earlier in the array it will return `false` and filter it out.
