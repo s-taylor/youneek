@@ -42,6 +42,11 @@ const unique = () => {
     };
 };
 ```
+
+## Try it out
+
+Try it out with [runkit](https://runkit.com/nizmox/5d0bf825fda884001a41f6e7)
+
 ## Older browsers
 
 This package uses `new Set`. If you are on an older browser you may need a polyfill.
