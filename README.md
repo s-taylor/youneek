@@ -56,21 +56,4 @@ This package uses `new Set`. If you are on an older browser you may need a polyf
 
 ## How it works
 
-The original version of this package did not require use of `Set` and was usable via `.filter(unique)` rather than `filter(unique())` which was nicer. It looked like this...
-
-```js
-function unique(elem, index, array) {
-  for (var i = 0; i < index; i++) {
-    if (array[i] === elem) return false;
-  }
-  return true;
-}
-```
-
-This works by looping through the array and it checks each element against all the elements prior to it, to see if the same value exists. If it finds the same value earlier in the array it will return `false` and filter it out.
-
-The problem with this approach is you end up rechecking the same values over and over. It is smart enough to abort as soon as it sees a duplication but on larger arrays performance will suffer.
-
-So I wanted to find a solution that is performant. The unfortunate problem with `.filter` is there isn't any way to see the result as you iterate, so there isn't any way to check if you already found the value earlier in the iteration. You can't just check the results you have generated so far to see if the current value exists in there.
-
-The solution to this is to use a closure which on the first element will use the `[...new Set(arr)]` trick to find all the unique values and store in `cache`. Then as it iterates it simply checks each value against the `cache`. It does this using `.delete` which means the first time a value is found, it will return `true` (for a successful deletion) since every element exists once in the cache. On subsequent checks for the same value (i.e. duplicates) it will return `false` since that value has been deleted (the deletion fails).
+You can read about it on [Medium](https://medium.com/@simontaylorau/filter-unique-in-javascript-226007247354)
