@@ -4,15 +4,7 @@ A function to filter unique (you-neek) values
 
 ## Why?
 
-It always felt natural to me to use `.filter` to find unique values in an array. Filter is meant to take an array, and remove unwanted results which is exactly what you are doing when getting unique values from an array. You iterate through an array, and remove any duplicate values you find, and then return the result.
-
-A neat trick with ES6 is you can get unique values using...
-
-```js
-const unique = arr => [...new Set(arr)];
-```
-
-However to me, `arr.filter(unique())` is better than `unique(arr)`, especially if you're chaining to a `.map`, `.reduce` or other `.filter`.
+You can read about it on [Medium](https://medium.com/@simontaylorau/filter-unique-in-javascript-226007247354)
 
 ## How to use it?
 
@@ -53,7 +45,3 @@ This package uses `new Set`. If you are on an older browser you may need a polyf
 
 * [Set support](https://kangax.github.io/compat-table/es6/#test-Set)
 * [Polyfill with core-js](https://github.com/zloirock/core-js)
-
-## How it works
-
-You can read about it on [Medium](https://medium.com/@simontaylorau/filter-unique-in-javascript-226007247354)
