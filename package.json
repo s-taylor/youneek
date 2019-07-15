@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/s-taylor/youneek#readme",
   "devDependencies": {
-    "ava": "^1.4.1"
+    "ava": "^2.2.0"
   },
   "ava": {
     "verbose": true
